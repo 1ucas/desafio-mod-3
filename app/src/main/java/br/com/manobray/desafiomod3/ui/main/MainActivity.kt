@@ -1,10 +1,9 @@
 package br.com.manobray.desafiomod3.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import br.com.manobray.desafiomod3.R
-import br.com.manobray.desafiomod3.ui.main.questions.QuestionsFragment
 
 class MainActivity : AppCompatActivity() {
 

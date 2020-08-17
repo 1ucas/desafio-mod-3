@@ -1,6 +1,5 @@
 package br.com.manobray.desafiomod3.ui.main.questions
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -11,9 +10,9 @@ class QuestionsViewModel(private val questions: List<Question>) : ViewModel() {
     var finalResult: Int? = null
     var liveData = MutableLiveData<Unit>()
 
-    private fun answerQuestion(question:Int, answer:Boolean) {
+    private fun answerQuestion(question: Int, answer: Boolean) {
         answers.add(answer)
-        if(question == questions.size - 1) {
+        if (question == questions.size - 1) {
             liveData.value = Unit
         }
     }

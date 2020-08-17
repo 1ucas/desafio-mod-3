@@ -16,8 +16,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginHorizontal="100dp"
         tools:text="59% de acertos"
-        android:textSize="58sp"
-        />
+        android:textSize="58sp" />
 
     <Button
         android:id="@+id/btn_restart"
@@ -27,8 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_acertos"
         android:layout_marginTop="100dp"
-        tools:text="REINICIAR"
-        />
+        tools:text="REINICIAR" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
