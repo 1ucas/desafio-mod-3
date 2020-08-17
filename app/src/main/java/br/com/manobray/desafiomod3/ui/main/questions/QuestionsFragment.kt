@@ -6,17 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import br.com.manobray.desafiomod3.R
 import br.com.manobray.desafiomod3.ui.main.MainActivity
+import br.com.manobray.desafiomod3.ui.main.MainViewModel
+import kotlinx.android.synthetic.main.questions_fragment.*
+import org.koin.android.viewmodel.ext.android.sharedViewModel
 
 class QuestionsFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = QuestionsFragment()
-    }
-
     private val viewModel: QuestionsViewModel by viewModels()
+    private val mainViewModel: MainViewModel by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,17 +26,41 @@ class QuestionsFragment : Fragment() {
         return inflater.inflate(R.layout.questions_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        //viewModel = ViewModelProvider(this).get(QuestionsViewModel::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupListeners()
+        setupView()
     }
 
-    private fun answeredAllQuestions() {
-        viewModel.finalResult?.let {
+    override fun onStart() {
+        super.onStart()
+        startGame()
+    }
+
+    private fun startGame() {
+        viewModel.start(mainViewModel.questions)
+    }
+
+    private fun setupView() {
+        btn_true.setOnClickListener {
+            viewModel.answerQuestion(true)
+        }
+
+        btn_false.setOnClickListener {
+            viewModel.answerQuestion(false)
+        }
+    }
+
+    private fun setupListeners() {
+        viewModel.currentQuestion.observe(this, Observer {
+            tv_question.text = it.title
+        })
+
+        viewModel.finalResult.observe(this, Observer {
             var bundle = Bundle()
             bundle.putInt(MainActivity.RESULT_KEY, it)
             findNavController().navigate(R.id.resultFragment, bundle)
-        }
+        })
     }
 
 }

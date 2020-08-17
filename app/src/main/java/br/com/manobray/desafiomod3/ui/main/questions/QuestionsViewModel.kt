@@ -1,20 +1,50 @@
 package br.com.manobray.desafiomod3.ui.main.questions
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import br.com.manobray.desafiomod3.ui.util.SingleLiveEvent
+import java.lang.Exception
+import kotlin.math.roundToInt
 
-class QuestionsViewModel(private val questions: List<Question>) : ViewModel() {
+class QuestionsViewModel() : ViewModel() {
 
     private var answers = mutableListOf<Boolean>()
-    private var currentQuestion = 0
-    var finalResult: Int? = null
-    var liveData = MutableLiveData<Unit>()
+    private var result = 0.0
+    private lateinit var questions: List<Question>
 
-    private fun answerQuestion(question: Int, answer: Boolean) {
+    var questionIndex = 0
+    val currentQuestion = SingleLiveEvent<Question>()
+    val finalResult = SingleLiveEvent<Int>()
+
+    fun start(questions: List<Question>) {
+        answers.clear()
+        result = 0.0
+
+        this.questions = questions
+        questionIndex = 0
+
+        currentQuestion.value = questions[questionIndex]
+    }
+
+    fun answerQuestion(answer: Boolean) {
         answers.add(answer)
-        if (question == questions.size - 1) {
-            liveData.value = Unit
+        if (questionIndex == questions.size - 1) {
+            calcFinalResult()
+        } else {
+            questionIndex++
+            currentQuestion.value = questions[questionIndex]
         }
     }
 
+    private fun calcFinalResult() {
+        if(answers.size != questions.size) {
+            throw Exception("Deu ruim")
+        } else {
+            questions.forEachIndexed { index, question ->
+                if(question.answer == answers[index]) {
+                    result += 1.0/questions.size
+                }
+            }
+            finalResult.value = (result * 100).roundToInt()
+        }
+    }
 }

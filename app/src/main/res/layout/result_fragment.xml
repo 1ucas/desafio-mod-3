@@ -26,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_acertos"
         android:layout_marginTop="100dp"
-        tools:text="REINICIAR" />
+        android:text="REINICIAR" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
