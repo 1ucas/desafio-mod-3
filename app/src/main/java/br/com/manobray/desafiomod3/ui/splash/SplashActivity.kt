@@ -5,13 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.manobray.desafiomod3.R
-import br.com.manobray.desafiomod3.ui.data.QuestionDBHelper
+import br.com.manobray.desafiomod3.ui.data.DataManager
 import br.com.manobray.desafiomod3.ui.main.MainActivity
-import br.com.manobray.desafiomod3.ui.main.mainDIModulesList
-import br.com.manobray.desafiomod3.ui.main.questions.Question
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import org.koin.core.context.loadKoinModules
 import java.util.*
 import kotlin.concurrent.timerTask
 

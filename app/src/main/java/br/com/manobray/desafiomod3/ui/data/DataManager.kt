@@ -1,10 +1,8 @@
-package br.com.manobray.desafiomod3.ui.splash
+package br.com.manobray.desafiomod3.ui.data
 
-import android.R
 import android.content.Context
 
 import android.content.SharedPreferences
-import br.com.manobray.desafiomod3.ui.data.QuestionDBHelper
 import br.com.manobray.desafiomod3.ui.main.questions.Question
 import java.util.ArrayList
 
