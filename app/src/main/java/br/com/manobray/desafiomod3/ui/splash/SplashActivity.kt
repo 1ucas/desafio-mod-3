@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.manobray.desafiomod3.R
 import br.com.manobray.desafiomod3.ui.data.DataManager
 import br.com.manobray.desafiomod3.ui.main.MainActivity
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.util.*
@@ -43,7 +44,7 @@ class SplashActivity : AppCompatActivity() {
             val intent = Intent(this@SplashActivity, MainActivity::class.java).apply {
                 putParcelableArrayListExtra(MainActivity.PARAMS_KEY, questions)
             }
-            runOnUiThread {
+            launch(Dispatchers.Main) {
                 finish()
                 startActivity(intent)
             }
