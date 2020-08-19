@@ -1,4 +1,4 @@
-package br.com.manobray.desafiomod3.ui.data
+package br.com.manobray.desafiomod3.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

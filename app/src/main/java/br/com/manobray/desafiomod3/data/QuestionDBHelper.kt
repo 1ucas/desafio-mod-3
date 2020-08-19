@@ -1,5 +1,7 @@
-package br.com.manobray.desafiomod3.ui.data
+package br.com.manobray.desafiomod3.data
+
+import br.com.manobray.desafiomod3.data.QuestionDatabase
 
 object QuestionDBHelper {
-    lateinit var db:QuestionDatabase
+    lateinit var db: QuestionDatabase
 }
