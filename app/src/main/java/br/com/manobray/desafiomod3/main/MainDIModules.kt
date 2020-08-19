@@ -1,7 +1,7 @@
-package br.com.manobray.desafiomod3.ui.main
+package br.com.manobray.desafiomod3.main
 
-import br.com.manobray.desafiomod3.ui.main.questions.QuestionsViewModel
-import br.com.manobray.desafiomod3.ui.main.result.ResultViewModel
+import br.com.manobray.desafiomod3.main.questions.QuestionsViewModel
+import br.com.manobray.desafiomod3.main.result.ResultViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module

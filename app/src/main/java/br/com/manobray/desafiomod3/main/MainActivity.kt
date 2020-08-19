@@ -1,12 +1,9 @@
-package br.com.manobray.desafiomod3.ui.main
+package br.com.manobray.desafiomod3.main
 
 import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.com.manobray.desafiomod3.R
-import br.com.manobray.desafiomod3.ui.main.questions.Question
-import org.koin.android.viewmodel.ext.android.viewModel
+import br.com.manobray.desafiomod3.main.questions.Question
 import org.koin.android.viewmodel.ext.android.viewModel
 
 

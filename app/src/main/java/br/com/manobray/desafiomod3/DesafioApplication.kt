@@ -1,10 +1,10 @@
-package br.com.manobray.desafiomod3.ui
+package br.com.manobray.desafiomod3
 
 import android.app.Application
 import androidx.room.Room
-import br.com.manobray.desafiomod3.ui.data.QuestionDBHelper
-import br.com.manobray.desafiomod3.ui.data.QuestionDatabase
-import br.com.manobray.desafiomod3.ui.main.mainDIModules
+import br.com.manobray.desafiomod3.data.QuestionDBHelper
+import br.com.manobray.desafiomod3.data.QuestionDatabase
+import br.com.manobray.desafiomod3.main.mainDIModules
 import org.koin.core.context.startKoin
 
 class DesafioApplication : Application() {

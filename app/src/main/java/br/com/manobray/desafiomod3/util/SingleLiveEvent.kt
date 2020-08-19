@@ -1,4 +1,4 @@
-package br.com.manobray.desafiomod3.ui.util
+package br.com.manobray.desafiomod3.util
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner

@@ -1,12 +1,12 @@
-package br.com.manobray.desafiomod3.ui.splash
+package br.com.manobray.desafiomod3.splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.manobray.desafiomod3.R
-import br.com.manobray.desafiomod3.ui.data.DataManager
-import br.com.manobray.desafiomod3.ui.main.MainActivity
+import br.com.manobray.desafiomod3.data.DataManager
+import br.com.manobray.desafiomod3.main.MainActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

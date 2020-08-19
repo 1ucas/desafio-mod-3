@@ -1,4 +1,4 @@
-package br.com.manobray.desafiomod3.ui.main.questions
+package br.com.manobray.desafiomod3.main.questions
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

@@ -3,7 +3,7 @@ package br.com.manobray.desafiomod3.ui.data
 import android.content.Context
 
 import android.content.SharedPreferences
-import br.com.manobray.desafiomod3.ui.main.questions.Question
+import br.com.manobray.desafiomod3.main.questions.Question
 import java.util.ArrayList
 
 

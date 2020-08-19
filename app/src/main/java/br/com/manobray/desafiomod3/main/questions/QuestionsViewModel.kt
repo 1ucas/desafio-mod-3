@@ -1,7 +1,7 @@
-package br.com.manobray.desafiomod3.ui.main.questions
+package br.com.manobray.desafiomod3.main.questions
 
 import androidx.lifecycle.ViewModel
-import br.com.manobray.desafiomod3.ui.util.SingleLiveEvent
+import br.com.manobray.desafiomod3.util.SingleLiveEvent
 import java.lang.Exception
 import kotlin.math.roundToInt
 

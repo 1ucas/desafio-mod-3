@@ -1,4 +1,4 @@
-package br.com.manobray.desafiomod3.ui.main.questions
+package br.com.manobray.desafiomod3.main.questions
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import br.com.manobray.desafiomod3.R
-import br.com.manobray.desafiomod3.ui.main.MainActivity
-import br.com.manobray.desafiomod3.ui.main.MainViewModel
+import br.com.manobray.desafiomod3.main.MainActivity
+import br.com.manobray.desafiomod3.main.MainViewModel
 import kotlinx.android.synthetic.main.questions_fragment.*
 import org.koin.android.viewmodel.ext.android.sharedViewModel
 

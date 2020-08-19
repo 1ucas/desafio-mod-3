@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/questionsFragment"
-        android:name="br.com.manobray.desafiomod3.ui.main.questions.QuestionsFragment"
+        android:name="br.com.manobray.desafiomod3.main.questions.QuestionsFragment"
         android:label="Questions"
         tools:layout="@layout/questions_fragment" />
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="br.com.manobray.desafiomod3.ui.main.result.ResultFragment"
+        android:name="br.com.manobray.desafiomod3.main.result.ResultFragment"
         android:label="Result"
         tools:layout="@layout/result_fragment" />
 

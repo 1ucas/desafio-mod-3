@@ -1,13 +1,12 @@
-package br.com.manobray.desafiomod3.ui.main.result
+package br.com.manobray.desafiomod3.main.result
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import br.com.manobray.desafiomod3.R
-import br.com.manobray.desafiomod3.ui.main.MainActivity
+import br.com.manobray.desafiomod3.main.MainActivity
 import kotlinx.android.synthetic.main.result_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
